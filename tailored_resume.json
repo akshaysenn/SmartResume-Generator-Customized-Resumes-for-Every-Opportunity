@@ -1,0 +1,141 @@
+{
+  "lastUpdated": "2024-01-03",
+  "name": "Akshay Sain",
+  "github": "github.com/akshaysenn",
+  "website": null,
+  "linkedin": "linkedin.com/in/akshaysenn",
+  "email": "theakshaysen@gmail.com",
+  "education": [
+    {
+      "institution": "Gurukula Kangri Vishwavidyalaya Uttarakhand, IN",
+      "date": "May 2028",
+      "degree": "Bachelor of Technology Computer Science and Engineering",
+      "gpa": null
+    }
+  ],
+  "highSchool": {
+    "name": "Anand Swaroop Arya Saraswati Vidya Mandir Roorkee, UK",
+    "note": "Intermediate",
+    "date": "May 2024",
+    "gpa": null
+  },
+  "coursework": {
+    "courses": [
+      "Data Structures and Algorithms",
+      "Machine Learning",
+      "Natural Language Processing",
+      "Software Engineering",
+      "Database Management Systems"
+    ],
+    "awards": []
+  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "C/C++",
+        "SQL"
+      ]
+    },
+    {
+      "category": "AI/ML Frameworks",
+      "items": [
+        "TensorFlow",
+        "pandas",
+        "NumPy",
+        "Matplotlib"
+      ]
+    },
+    {
+      "category": "Web Development",
+      "items": [
+        "React",
+        "Node.js",
+        "Flask",
+        "HTML/CSS",
+        "REST APIs"
+      ]
+    },
+    {
+      "category": "Cloud Platforms",
+      "items": [
+        "Google Cloud Platform",
+        "Docker"
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": [
+        "Git",
+        "CI/CD Pipelines",
+        "TravisCI",
+        "VS Code",
+        "PyCharm",
+        "IntelliJ",
+        "JUnit"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI-Generated Content Detector",
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "PostgreSQL"
+      ],
+      "date": "May 2018 \u2013 May 2020",
+      "details": [
+        "Developed a program to identify and filter AI-generated content, ensuring less exposure to dark data.",
+        "Designed a classification model using transformers, achieving accuracy in detecting AI-generated text.",
+        "Built the solution with Python, TensorFlow, and PostgreSQL, enabling real-time verification for 10,000+ entries."
+      ]
+    },
+    {
+      "name": "OneRoof",
+      "technologies": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Docker"
+      ],
+      "date": "Dec 2024 \u2013 Present",
+      "details": [
+        "Built a platform connecting agencies with businesses, featuring advanced search filters and a rating-based discovery system.",
+        "Developed user authentication, messaging features, and a PostgreSQL database to manage listings, ensuring scalability and seamless data handling.",
+        "Deployed using Docker and achieved 99.9% uptime, facilitating successful collaborations."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "organization": "LearnTechX",
+      "role": "Co-Founder",
+      "date": "Jan 2022 \u2013 Oct 2023",
+      "details": [
+        "Spearheaded the design and development of safety device using cutting-edge technology, reducing manufacturing costs."
+      ]
+    },
+    {
+      "organization": "Embibe (JIO)",
+      "role": "User Acceptance Tester",
+      "date": "Sept 2023 \u2013 May 2024",
+      "details": [
+        "Conducted comprehensive acceptance testing of web and mobile applications, ensuring alignment with functional requirements."
+      ]
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Software Development",
+      "date": "Ongoing",
+      "details": [
+        "Passionate about creating innovative and impactful software solutions."
+      ]
+    }
+  ]
+}

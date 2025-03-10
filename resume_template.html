@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }} - Resume</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { text-align: center; font-size: 28px; }
+    .contacts { text-align: center; font-size: 12px; margin-bottom: 20px; }
+    .section-title { font-size: 18px; font-weight: bold; border-bottom: 1px solid #ccc; margin-top: 30px; }
+    .item-title { font-weight: bold; }
+    .item { margin: 8px 0; }
+    .bullet { margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <h1>{{ name }}</h1>
+  <div class="contacts">
+    {% set contacts = [github, website, linkedin, email] | select('string') | list %}
+    {{ contacts | join("   ") }}
+  </div>
+
+  <!-- Education Section -->
+  {% if education %}
+  <div class="section-title">Education</div>
+  {% for edu in education %}
+    <div class="item">
+      <span class="item-title">{{ edu.institution }}</span> &nbsp;&nbsp;
+      <span>{{ edu.date }}</span>
+      <br>
+      <span>{{ edu.degree }}</span>
+      {% if edu.gpa %} &nbsp;&nbsp; GPA: {{ edu.gpa }}{% endif %}
+    </div>
+  {% endfor %}
+  {% if coursework and coursework.courses %}
+    <div class="item">Coursework: {{ coursework.courses | join(", ") }}</div>
+  {% endif %}
+  {% endif %}
+
+  <!-- Skills Section -->
+  {% if skills %}
+  <div class="section-title">Skills</div>
+  {% for skill in skills %}
+    <div class="item">
+      <span class="item-title">{{ skill.category }}:</span> {{ skill['items'] | join(", ") }}
+    </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Experience Section -->
+  {% if experience %}
+  <div class="section-title">Experience</div>
+  {% for exp in experience %}
+    <div class="item">
+      <span class="item-title">{{ exp.role }}</span>
+      {% if exp.organization or exp.date %} - <span>{{ exp.organization }} | {{ exp.date }}</span>{% endif %}
+      <br>
+      {% for detail in exp.details %}
+        <div class="bullet">• {{ detail }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Projects & Awards Section -->
+  {% if projects %}
+  <div class="section-title">Projects & Awards</div>
+  {% for proj in projects %}
+    <div class="item">
+      <span class="item-title">{{ proj.name }}</span>
+      {% if proj.technologies or proj.date %}
+         - <span>{{ proj.technologies | join(", ") }} {% if proj.date %}| {{ proj.date }}{% endif %}</span>
+      {% endif %}
+      <br>
+      {% for detail in proj.details %}
+        <div class="bullet">• {{ detail }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Extracurriculars / Hobbies Section -->
+  {% if hobbies %}
+  <div class="section-title">Extracurriculars</div>
+  {% for hobby in hobbies %}
+    <div class="item">
+      <span class="item-title">{{ hobby.name }}</span>
+      {% if hobby.date %} - <span>{{ hobby.date }}</span>{% endif %}
+      <br>
+      {% for detail in hobby.details %}
+        <div class="bullet">• {{ detail }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  {% endif %}
+</body>
+</html>
